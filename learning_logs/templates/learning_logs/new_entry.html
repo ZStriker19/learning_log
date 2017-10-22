@@ -9,6 +9,7 @@
 {% block content %}
   <h2> Add a new entry: </h2>
 
+
   <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post' class='form'>
     {% csrf_token %}
     {% bootstrap_form form %}
@@ -16,6 +17,4 @@
       <button name='submit' class='btn btn-primary'>Add Entry</button>
     {% endbuttons %}
   </form>
-
-
 {% endblock content %}
